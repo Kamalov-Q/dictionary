@@ -1,0 +1,188 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #4d59fb;
+}
+
+
+.wrapper {
+    width: 420px;
+    background: white;
+    border-radius: 7px;
+    padding: 28px 28px 45px;
+}
+
+.wrapper header {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.wrapper .search {
+    margin: 35px 0 18px;
+    position: relative;
+}
+
+.search input {
+    height: 53px;
+    width: 100%;
+    outline: none;
+    padding: 0 42px;
+    font-size: 16px;
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+
+.search input:focus {
+    border: 1px solid #4d59fb;
+    padding: 0 41px;
+}
+
+.search input:focus ~.fas {
+    color: #4d59fb;
+}
+
+.search input::placeholder {
+    color: #b8b8b8;
+}
+
+.search .fas, .search .bi{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+.search .fas {
+    left: 18px;
+    font-size: 16px;
+    pointer-events: none;
+}
+
+.search .bi {
+    right: 18px;
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+}
+
+.search input:valid ~.bi {
+    display: block;
+}
+
+.wrapper.active .info-text {
+    display: none;
+}
+
+.wrapper ul {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.wrapper.active ul {
+    height: auto;
+    opacity: 1;
+}
+
+.wrapper.active ul {
+    display: block;
+}
+
+
+.wrapper ul li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #ccc;
+}
+
+.wrapper .info-text {
+    font-size: 13px;
+    color: #9a9a9a;
+    margin: -3px 0 -10px;
+}
+
+.wrapper .info-text span {
+    font-weight: 600;
+}
+
+.wrapper ul {
+    display: none;
+}
+
+ul .word p {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+ul .content {
+    max-height: 215px;
+    overflow-y: auto;
+}
+
+ul .content::-webkit-scrollbar{
+    width: 0;
+}
+
+ul .word span {
+    color: #989898;
+    font-size: 12px;
+}
+
+ul .word i {
+    cursor: pointer;
+    font-size: 16px;
+    color: #999;
+}
+
+ul li:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: 0;
+}
+
+.content li .details {
+    padding-left: 10px;
+    border-left: 3px solid #4d59fb;
+    border-radius: 4px 0 0 4px;
+}
+
+.content li .details p {
+    font-size: 17px;
+    font-weight: 500;
+} 
+
+.content li .details span {
+    font-size: 15px;
+    color: #7e7e7e;
+}
+
+.synonyms .details .list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.synonyms .details .list span {
+    margin-right: 5px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
